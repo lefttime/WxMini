@@ -1,0 +1,6 @@
+<template name="info-0">
+  <view class="userinfo-section">
+    <view class="userinfo-section-title">未注册玩家</view>
+    <view class="userinfo-section-item">加入时间：{{createdAt}}</view>
+  </view>
+</template>

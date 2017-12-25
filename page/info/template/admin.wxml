@@ -1,0 +1,9 @@
+<template name="info-5">
+  <view class="userinfo-section">
+    <view class="userinfo-section-title">
+      <view class="userinfo-section-title-item">昵称：{{nickname}} [管理员]</view>
+      <view class="userinfo-section-title-item-navi" bindtap="logout">退出登录</view>
+    </view>
+    <view class="userinfo-section-item">加入时间：{{createdAt}}</view>
+  </view>
+</template>

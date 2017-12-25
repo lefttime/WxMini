@@ -1,0 +1,87 @@
+<import src="template/visitor.wxml" />
+<import src="template/player.wxml" />
+<import src="template/promoter.wxml" />
+<import src="template/admin.wxml" />
+<import src="template/hosting.wxml" />
+<import src="template/default.wxml" />
+
+<view class="page-body">
+  <view class="userinfo-box">
+    <template is="info-{{userDetail.post}}" data="{{...promoter, ...userDetail}}" />
+  </view>
+
+  <view wx:if="{{userDetail.post > 1}}" class="navigator-box">
+    <navigator url="pages/benefit/benefit">
+      <view class="navigator">
+        <view class="navigator-text">
+          <view class="navigator-text-title">我的红利</view>
+          <view class="navigator-text-subtitle">查看红利详细信息</view>
+        </view>
+
+        <view class="navigator-navi">
+          <view class="navigator-navi-item">
+            可用金额：<view class="navigator-special-text">0</view>元
+          </view>
+          <view class="navigator-navi-item"><view class="navigator-navi-arrow" /></view>
+        </view>
+      </view>
+    </navigator>
+
+    <navigator url="pages/member/member" class="navigator">
+      <view class="navigator-text">
+        <view class="navigator-text-title">我的会员</view>
+        <view class="navigator-text-subtitle">查看谁绑定了我的推广码</view>
+      </view>
+      <view class="navigator-navi">
+        <view class="navigator-navi-item">
+          会员数：<view class="navigator-special-text">{{promoter.memberTotal}}</view>人
+        </view>
+        <view class="navigator-navi-item"><view class="navigator-navi-arrow" /></view>
+      </view>
+    </navigator>
+
+    <navigator url="pages/promote/promote?phone={{promoter.phone}}" class="navigator">
+      <view class="navigator-text">
+        <view class="navigator-text-title">我的推广员</view>
+        <view class="navigator-text-subtitle">查看我的推广员</view>
+      </view>
+      <view class="navigator-navi">
+        <view class="navigator-navi-item">
+          推广数：<view class="navigator-special-text">{{promoter.promoterTotal}}</view>人
+        </view>
+      </view>
+    </navigator>
+
+    <navigator url="pages/qrcode/qrcode" class="navigator">
+      <view class="navigator-text">
+        <view class="navigator-text-title">我的二维码</view>
+        <view class="navigator-text-subtitle">查看我的二维码</view>
+      </view>
+      <view class="navigator-navi">
+        <view class="navigator-navi-item">
+          推广码：<view class="navigator-special-text">{{promoter.promoCode}}</view>
+        </view>
+      </view>
+    </navigator>
+
+    <navigator url="pages/edit/edit" class="navigator">
+      <view class="navigator-text">
+        <view class="navigator-text-title">修改信息</view>
+        <view class="navigator-text-subtitle">补全、修改我的个人信息</view>
+      </view>
+    </navigator>
+  </view>
+
+  <view wx:if="{{userDetail.post > 4}}" class="navigator-box">
+    <navigator url="pages/admin/admin" class="navigator">
+      <view class="navigator-text">
+        <view class="navigator-text-title">管理面板</view>
+        <view class="navigator-text-subtitle"></view>
+      </view>
+      <view class="navigator-navi">
+        <view class="navigator-navi-item"></view>
+        <view class="navigator-navi-item"><view class="navigator-navi-arrow" /></view>
+      </view>
+    </navigator>
+  </view>
+</view>

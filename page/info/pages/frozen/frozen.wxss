@@ -1,0 +1,14 @@
+@import "../../../common/lib/weui.wxss";
+
+.page-body {
+  display:        flex;
+  flex-direction: column;
+  min-height:     100%;
+  font-size:      32rpx;
+  font-family:    -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.page-section{
+  width:  100%;
+  margin: 32rpx 0;
+}

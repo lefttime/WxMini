@@ -1,0 +1,62 @@
+{
+  "pages": [
+    "page/wxLogin/index",
+    "page/home/index",
+    "page/info/index",
+    "page/proLogin/index",
+
+    "page/info/pages/benefit/benefit",
+    "page/info/pages/promote/promote",
+    "page/info/pages/withdraw/withdraw",
+    "page/info/pages/orders/orders",
+    "page/info/pages/admin/admin",
+    "page/info/pages/register/register",
+    "page/info/pages/manager/manager",
+    "page/info/pages/frozen/frozen",
+    "page/info/pages/member/member",
+    "page/info/pages/edit/edit",
+    "page/info/pages/phone/phone",
+    "page/info/pages/qrcode/qrcode",
+    "page/info/pages/main_bill/main_bill",
+    "page/info/pages/daily_bill/daily_bill",
+    "page/info/pages/player_bill/player_bill",
+
+    "page/info/pages/promote/pages/detail/detail",
+    "page/info/pages/promote/pages/creation/creation"
+  ],
+
+  "window": {
+    "navigationBarTitleText":       "摩语助手",
+    "backgroundColor":              "#F8F8F8",
+    "navigationBarTextStyle":       "white",
+    "navigationBarBackgroundColor": "#357AE1"
+  },
+  
+
+  "tabBar": {
+    "color":           "#7A7E83",
+    "selectedColor":   "#3cc51f",
+    "borderStyle":     "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath":         "page/home/index",
+      "iconPath":         "image/iconfont-home.png",
+      "selectedIconPath": "image/iconfont-home-active.png",
+      "text":             "首页"
+    }, {
+      "pagePath":         "page/info/index",
+      "iconPath":         "image/iconfont-user.png",
+      "selectedIconPath": "image/iconfont-user-active.png",
+      "text":             "代理"
+    }]
+  },
+
+  "networkTimeout": {
+    "request":       10000,
+    "connectSocket": 10000,
+    "uploadFile":    10000,
+    "downloadFile":  10000
+  },
+
+  "debug": false
+}

@@ -1,0 +1,23 @@
+<import src="/page/common/head.wxml" />
+<import src="/page/common/foot.wxml" />
+
+<view class="page-body">
+  <view class="title-body">
+    <view class="title-section">
+      <view class="title-item-1">昵称</view>
+      <view class="title-item-2">收入</view>
+    </view>
+  </view>
+
+  <view class="content-body">
+    <view wx:for="{{charges}}" wx:key="{{date}}">
+      <view id="{{index}}" class="content-section" bindtap='checkCharge'>
+        <view class="content-item-1">
+          <view class="content-item-1-name">小飞</view>
+          <view class="content-item-1-time">2017-09-27 16:34:50</view>
+        </view>
+        <view class="content-item-2">{{item.income}}元</view>
+      </view>
+    </view>
+  </view>
+</view>

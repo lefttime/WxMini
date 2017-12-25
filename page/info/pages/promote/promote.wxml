@@ -1,0 +1,39 @@
+<view class="page-body">
+
+  <view wx:if="{{userInfo.post > 1}}" class="promoter-body">
+    <view class="promoter-section-head">
+      <view class="promoter-section-head-item">已建推广：{{promoterTotal}}</view>
+      <view class="promoter-section-head-item-navi" wx:if="{{promoter.promoLevel <= 2 ? isSelf : false }}">
+        <navigator url="./pages/creation/creation" hover-class="navigator-hover">添加推广员</navigator>
+      </view>
+    </view>
+
+    <view wx:for="{{promoters}}" wx:key="openId">
+      <view class="promoter-section">
+        <navigator url="./pages/detail/detail?phone={{item.phone}}" hover-class="navigator-hover">
+          <view class="promoter-item-primary">
+            <view class="promoter-item-primary-info">
+              <view class="promoter-item-info-title">{{item.nickname}}</view>
+              <view class="promoter-item-info-desc">手机号：{{item.phone}}</view>
+            </view>
+          </view>
+        </navigator>
+        <view class="promoter-item-secondary-info">
+          <view wx:if="{{item.promoLevel==1}}">
+            <view class="promoter-item-info-desc">已推广二级：{{item.promoterTotal}}人</view>
+            <view class="promoter-item-info-desc">已推广三级：{{item.promoterTotal}}人</view>
+          </view>
+          <view wx:elif="{{item.promoLevel==2}}">
+            <view class="promoter-item-info-desc">已推广：{{item.promoterTotal}}人</view>
+          </view>
+        </view>
+        <navigator url="../promote/promote?phone={{item.phone}}&nickname={{item.nickname}}" hover-class="navigator-hover">
+          <view class="promoter-item-last-info" wx:if="{{item.promoLevel < 2}}">
+            <view class="navigator-arrow" />
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  
+</view>

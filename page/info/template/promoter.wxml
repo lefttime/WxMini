@@ -1,0 +1,14 @@
+<template name="info-3">
+  <view class="userinfo-section">
+    <view class="userinfo-section-title">
+      <view class="userinfo-section-title-item">昵称：{{nickname}}</view>
+      <view class="userinfo-section-title-item-navi" bindtap="logout">退出登录</view>
+    </view>
+    <view class="userinfo-section-item">推广等级：{{promoLevel}}级推广员</view> 
+    <view class="userinfo-section-item">加入时间：{{createdAt}}</view>
+    <view class="userinfo-section-item">状态：
+      <view wx:if="{{status==0}}" class="special-text-green">启用</view>
+      <view wx:else class="special-text-red">停封</view>
+    </view>
+  </view>
+</template>

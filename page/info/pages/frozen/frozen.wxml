@@ -1,0 +1,24 @@
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<view class="page-body">
+  <!--<template is="head" data="{{...userInfo}}"/>-->
+
+  <view class="page-section">
+    <view class="page-section-title">选择封号时长</view>
+    <view class="weui-cells weui-cell_after-title">
+      <radio-group bindchange="durationChange">
+        <label class="weui-cell weui-check_label" wx:for="{{durations}}" wx:key="durations.value">
+          <view class="weui-cell__hd">
+            <radio value="{{item.value}}" checked="{{item.checked}}" />
+          </view>
+          <view class="weui-cell__bd">{{item.name}}</view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+
+  <view><button type="primary" bindtap="doFrozen">确定</button></view>
+
+  <!-- <template is="foot" /> -->
+</view>

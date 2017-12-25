@@ -1,0 +1,45 @@
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<view class="page-body">
+  <!--<template is="head" data="{{...userInfo}}"/>-->
+
+  <view class="option-navi-box">
+    <view class="option-navi-item">
+      <button id="0" class="btn-font-style" type="{{optionIndex==0 ? 'primary' : 'default'}}" bindtap="changeOption">我的玩家</button>
+    </view>
+    <view class="option-navi-item">
+      <button id="1" class="btn-font-style" type="{{optionIndex==1 ? 'primary' : 'default'}}" bindtap="changeOption">二级推广玩家</button>
+    </view>
+    <view class="option-navi-item">
+      <button id="2" class="btn-font-style" type="{{optionIndex==2 ? 'primary' : 'default'}}" bindtap="changeOption">三级推广玩家</button>
+    </view>
+  </view>
+
+  <view class="search-navi-box">
+    <view class="search-navi-item-main">
+      <picker mode="date" value="{{selected_date}}" fields="month" bindchange="changeDate">
+        {{selected_date}}
+      </picker>
+    </view>
+    <view class="search-navi-item-sub">购钻总额: 0 提成:0</view>
+  </view>
+
+  <view class="history-info-box">
+    <view wx:for="{{history}}" wx:key="createdAt">
+      <view class="history-info-section">
+        <view class="history-info-item-main">
+          <view class="history-info-item-main-title">{{item.nickname}}</view>
+          <view class="history-info-item-main-desc">游戏ID: {{item.gameId}}</view>
+          <view class="history-info-item-main-desc">{{item.createdAt}}</view>
+        </view>
+        <view class="history-info-item-sub">
+          <view class="history-info-item-sub-titl">充值: {{item.topup}}</view>
+          <view class="history-info-item-sub-desc">返现: {{item.benefit}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- <template is="foot" /> -->
+</view>

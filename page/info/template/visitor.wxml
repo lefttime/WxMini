@@ -1,0 +1,6 @@
+<template name="info-1">
+  <view class="userinfo-section">
+    <view class="userinfo-section-title">游客</view>
+    <view class="userinfo-section-item">加入时间：{{createdAt}}</view>
+  </view>
+</template>

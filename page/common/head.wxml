@@ -1,0 +1,11 @@
+<template name="head">
+  <view class="page-head">
+    <view class="page-head-item">{{nickname}}</view>
+    <!-- <view class="page-head-item">ID:{{userId}}</view> -->
+    <view class="page-head-item"></view>
+    <view class="page-head-item">
+      <!-- <image style="width: 24px; height: 24px;" src="/image/iconfont-diamond.png"></image>   
+      <text>{{diamond}}</text>  -->
+    </view>
+  </view>
+</template>

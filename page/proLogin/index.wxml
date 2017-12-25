@@ -1,0 +1,34 @@
+<view class="login-container">
+  <view wx:if="{{ !logged }}">
+    <view class="app-info">
+      <image class="app-logo" src="/image/logo.png" />
+      <text class="app-name">摩语助手</text>
+    </view>
+
+    <view class="input-box">
+      <view class="input-section">
+        <view class="input-section-title">手机号</view>
+        <view class="input-section-input">
+          <input class="weui-input" auto-focus placeholder="请输入手机号" bindinput="phoneChanged" />
+        </view>
+      </view>
+      <view class="input-section">
+        <view class="input-section-title">验证码</view>
+        <view class="input-section-input">
+          <input class="weui-input" auto-focus placeholder="请输入验证码" bindinput="captchaChanged" />
+        </view>
+        <view class="input-section-button" wx:if="{{ !cdTimes }}">
+          <button type="primary" class="captcha-btn-invalid" bindtap="sendCaptcha">{{captcha_tips}}</button>
+        </view>
+        <view class="input-section-button" wx:else>
+          <button class="captcha-btn">{{captcha_tips}}</button>
+        </view>
+      </view>
+    </view>
+
+    <view class="submit-body">
+      <button class="submit-item" type="primary" bindtap="login">登录</button>
+      <button class="submit-item" type="primary" bindtap="cancel">取消</button>
+    </view>
+  </view>
+</view>

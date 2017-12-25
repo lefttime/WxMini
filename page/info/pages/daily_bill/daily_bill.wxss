@@ -1,0 +1,89 @@
+@import "/page/common/lib/weui.wxss";
+
+.page-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-size: 32rpx;
+  font-family: -apple-system-font,'微软雅黑',Helvetica Neue,Helvetica,sans-serif;
+}
+
+.title-body {
+  margin: 4rpx 0;
+  background-color: #FFF;
+}
+
+.title-section {
+  display:          flex;
+  flex-flow:        row;
+  min-height:       100%;
+  align-items:      center;
+  background-color: #FFF;
+
+  font-size:        36rpx;
+  font-weight:      600;
+}
+
+.title-item-1 {
+  flex: 20%;
+  text-align:       center;
+  /* background-color: red; */
+}
+
+.title-item-2 {
+  flex: 25%;
+  text-align:       center;
+  /* background-color: green; */
+}
+
+.title-item-3 {
+  flex: 25%;
+  text-align:       center;
+  /* background-color: blue; */
+}
+
+.title-item-4 {
+  flex: 30%;
+  text-align:       center;
+   /* background-color: yellow;  */
+}
+
+.content-body {
+}
+
+.content-section {
+  display:       flex;
+  flex-flow:     row;
+  height:        48px;
+  align-items:   center;
+  margin-bottom: 1px;
+  background-color: #FFF;
+}
+
+.content-item-1 {
+  flex:       20%;
+  text-align: center;
+}
+
+.content-item-2 {
+  flex:       25%;
+  text-align: center;
+  color:      red;
+}
+
+.content-item-3 {
+  flex:       25%;
+  text-align: center;
+}
+
+.content-item-4 {
+  flex:            30%;
+  display:         flex;
+  flex-flow:       row;
+  align-items:     center;
+  justify-content: center;
+}
+
+.content-item-text {
+  text-align: center;
+}

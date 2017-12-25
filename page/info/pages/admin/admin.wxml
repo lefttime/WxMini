@@ -1,0 +1,50 @@
+<import src="/page/common/head.wxml" />
+
+<view class="page-body">
+  <!--<template is="head" data="{{...userInfo}}"/>-->
+
+  <view class="brief-body">
+    <view class="brief-section">
+      <view class="brief-item-title">今日收益(元)</view>
+      <view class="brief-item-content special-item-font-green">{{benefitInfo.today}}</view>
+      <view class="brief-item-addition">当月收益: {{benefitInfo.currentMonth}}(元)</view>
+      <view class="brief-item-addition">历史收益: {{benefitInfo.total}}(元)</view>
+    </view>
+
+    <view class="brief-section">
+      <view class="brief-item-title">今日注册(元)</view>
+      <view class="brief-item-content special-item-font-green">{{registerInfo.today}}(人)</view>
+      <view class="brief-item-addition">当月注册: {{registerInfo.currentMonth}}(人)</view>
+      <view class="brief-item-addition">历史注册: {{registerInfo.total}}(人)</view>
+    </view>
+
+    <view class="brief-section">
+      <view class="brief-item-title">今日增新推广</view>
+      <view class="brief-item-content special-item-font-green">{{promoterInfo.today}}(人)</view>
+      <view class="brief-item-addition">当月增新推广: {{promoterInfo.currentMonth}}(人)</view>
+      <view class="brief-item-addition">历史推广总数: {{promoterInfo.total}}(人)</view>
+    </view>
+  </view>
+
+  <view class="navi-body">
+    <navigator url="../register/register">
+      <view class="navi-section">
+        <view class="navi-item-main">
+          <view class="navi-item-main-title">添加推广员</view>
+          <view class="navi-item-main-desc">增新一级推广员</view>
+        </view>
+        <view class="navi-item-sub"><view class="navigator-navi-arrow" /></view>
+      </view>
+    </navigator>
+
+    <navigator url="../manager/manager">
+      <view class="navi-section">
+        <view class="navi-item-main">
+          <view class="navi-item-main-title">查询推广员</view>
+          <view class="navi-item-main-desc">可对推广员进行封号/解封操作</view>
+        </view>
+        <view class="navi-item-sub"><view class="navigator-navi-arrow" /></view>
+      </view>
+    </navigator>
+  </view>
+</view>

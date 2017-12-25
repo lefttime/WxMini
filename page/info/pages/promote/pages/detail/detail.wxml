@@ -1,0 +1,49 @@
+<view class="page-body">
+  <view class="userinfo-head-box">
+    <view class="userinfo-head-item">
+      <!-- <view wx:if="{{promoter.avatar==''}}"> -->
+        <image style="width: 128px; height: 128px;" src="../../../../../../image/iconfont-user.png" />
+      <!-- </view> -->
+      <!-- <view wx:else><image style="width: 128px; height: 128px;" src="{{promoter.avatar}}" /></view> -->
+    </view>
+    <view class="userinfo-head-item">{{promoter.nickname}}</view>
+  </view>
+
+  <view class="userinfo-box">
+    <view class="userinfo-section">
+      <view class="userinfo-section-title">手机号</view>
+      <view class="userinfo-section-item">{{promoter.phone}}</view>
+    </view>
+
+    <view class="userinfo-section">
+      <view class="userinfo-section-title">上级</view>
+      <view class="userinfo-section-item">{{promoter.leaderNickname}}</view>
+    </view>
+    
+    <view class="userinfo-section">
+      <view class="userinfo-section-title">推广码</view>
+      <view class="userinfo-section-item">{{promoter.promoCode}}</view>
+    </view>
+    
+    <view class="userinfo-section">
+      <view class="userinfo-section-title">会员数</view>
+      <view class="userinfo-section-item">{{promoter.promoterTotal}}</view>
+    </view>
+    
+    <view class="userinfo-section">
+      <view class="userinfo-section-title">加入时间</view>
+      <view class="userinfo-section-item">{{promoter.createdAt}}</view>
+    </view>
+    
+    <view class="userinfo-section">
+      <view class="userinfo-section-title">最近登录时间</view>
+      <view class="userinfo-section-item">{{promoter.updatedAt}}</view>
+    </view>
+    
+    <view class="userinfo-section">
+      <view class="userinfo-section-title">状态</view>
+      <view wx:if="{{promoter.status==0}}" class="userinfo-section-item">启用</view>
+      <view wx:else class="userinfo-section-item">停封</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,40 @@
+@import "../../../common/lib/weui.wxss";
+
+.page-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-size: 32rpx;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.member-body {
+  display:    flex;
+  flex-flow:  column;
+  min-height: 100%;
+  margin-top: 32rpx;
+}
+
+.member-section {
+  display:          flex;
+  height:           120rpx;
+  background-color: #FFFFFF;
+  padding:          0 20rpx;
+  justify-content:  space-between;
+  align-items:      center;
+  margin-bottom:    1px;
+}
+
+.member-item-primary {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  font-weight:     600;
+}
+
+.member-item-secondary {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  color:           darkgray;
+}

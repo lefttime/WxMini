@@ -1,0 +1,24 @@
+<view class="login-container">
+  <view class="input-box">
+    <view class="input-section">
+      <view class="input-section-title">手机号</view>
+      <view class="input-section-input">
+        <input class="weui-input" auto-focus placeholder="请输入手机号" bindinput="phoneChanged" />
+      </view>
+      <view class="input-section-button" wx:if="{{ !cdTimes }}">
+        <button type="primary" class="captcha-btn-invalid" bindtap="sendCaptcha">{{captcha_tips}}</button>
+      </view>
+      <view class="input-section-button" wx:else>
+        <button class="captcha-btn">{{captcha_tips}}</button>
+      </view>
+    </view>
+    <view class="input-section">
+      <view class="input-section-title">验证码</view>
+      <view class="input-section-input">
+        <input class="weui-input" auto-focus placeholder="请输入验证码" bindinput="captchaChanged" />
+      </view>
+    </view>
+  </view>
+
+  <view class="submit-item"><button type="primary" bindtap="changePhoneNumber">确定</button></view>
+</view>

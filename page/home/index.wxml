@@ -1,0 +1,42 @@
+<import src="../common/head.wxml" />
+<import src="../common/foot.wxml" />
+
+<view class="container">
+  <!-- <view class="swiper-top-space" /> -->
+  <view class="page-body">
+    <view class="page-section page-section-spacingx swiper">
+      <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{background}}" wx:key="*this">
+          <swiper-item>
+             <!-- <view class="swiper-item {{item}}"></view>  -->
+             <view class="swiper-item">
+               <!-- <image style="width:{{ images[index].width }}rpx; height:{{ images[index].height }}rpx;" src="{{item}}" bindload="swiperImageLoad" mode="aspectFill" /> -->
+                <image style="width: 280px; height: 150px" src="{{item}}" mode="aspectFill" /> 
+             </view> 
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <view class="product-title">更多游戏</view>
+
+    <view class="product-body">
+      <view class="product-section">
+        <view class="product-item"><image style="width: 135px; height: 70px" src="../../image/home/hhmj.jpg" mode="aspectFill" /></view>
+        <view class="product-item"><image style="width: 135px; height: 70px" src="../../image/home/yjly.jpg" mode="aspectFill" /></view>
+      </view>
+
+      <view class="product-section">
+        <view class="product-item"><image style="width: 135px; height: 70px" src="../../image/home/kwx.jpg" mode="aspectFill" /></view>
+        <view class="product-item"><image style="width: 135px; height: 70px" src="../../image/home/xthh.jpg" mode="aspectFill" /></view>
+      </view>
+
+      <view class="product-section">
+        <view class="product-item"><image style="width: 135px; height: 70px" src="../../image/home/hzlzg.jpg" mode="aspectFill" /></view>
+        <view class="product-item"><image style="width: 135px; height: 70px" src="../../image/home/zzmj.jpg" mode="aspectFill" /></view>
+      </view>
+    </view>
+  </view>
+
+</view>

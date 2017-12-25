@@ -1,0 +1,24 @@
+<import src="/page/common/head.wxml" />
+<import src="/page/common/foot.wxml" />
+
+<view class="page-body">
+  <!--<template is="head" data="{{...userInfo}}"/>-->
+
+  <view class="benefit-body">
+    <view class="benefit-main">
+      <view class="benefit-main-item">可用金额(元)</view>
+      <view class="benefit-main-item-sub benefit-font-color">0.00</view>
+      <view class="benefit-main-item">累计收益：<view class="benefit-font-color">0</view></view>
+    </view>
+
+    <view class="benefit-sub">
+      <navigator url="../main_bill/main_bill">
+        <view class="benefit-sub-item benefit-font-weight benefit-font-underline">账单明细</view>
+      </navigator>
+    </view>
+  </view>
+
+  <view class="benefit-btn-area"><navigator url="../withdraw/withdraw"><button type="primary">提现</button></navigator></view>
+
+  <!-- <template is="foot" /> -->
+</view>

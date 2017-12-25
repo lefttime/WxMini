@@ -1,0 +1,100 @@
+@import "../../../common/lib/weui.wxss";
+
+.page-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-size: 32rpx;
+  font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.promoter-navi {
+  display:          flex;
+  background-color: #FFFFFF;
+  margin:           20rpx 0;
+  flex-flow:        row;
+  min-height:       100%;
+}
+
+.promoter-navi-item {
+  flex:   1;
+  margin: 0 20px;
+}
+
+.promoter-body {
+  display:    flex;
+  flex-flow:  column;
+  min-height: 100%;
+  margin-top: 32rpx;
+}
+
+.promoter-section-head {
+  display:         flex;
+  justify-content: space-between;
+  margin:          0 20px;
+}
+
+.promoter-section-head-item {
+}
+
+.promoter-section-head-item-navi {
+  color: forestgreen;
+  background: linear-gradient(forestgreen, forestgreen) no-repeat;
+  background-size: 100% 1px;
+  background-position: 0 1.25em;
+}
+
+.promoter-section {
+  display:          flex;
+  height:           120rpx;
+  background-color: #FFFFFF;
+  padding:          0 0 0 20px;
+  justify-content:  space-between;
+  align-items:      center;
+  margin-bottom:    1px;
+}
+
+.promoter-item-primary {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+}
+
+.promoter-item-primary-img {
+  display:          flex;
+  align-items:      center;
+}
+
+.promoter-item-primary-info {
+}
+
+.promoter-item-secondary-info {
+}
+
+.promoter-item-last-info {
+  height:           120rpx;
+  width:            40rpx;
+  display:          flex;
+  justify-content:  center;
+  align-items:      center;
+  padding-right:    20px;
+}
+
+.promoter-item-info-title {
+  font-size:   15px;
+  font-weight: 600;
+}
+
+.promoter-item-info-desc {
+  color:     #888888;
+  font-size: 12px;
+}
+.navigator-arrow {
+  display:      inline-block;
+  height:       18rpx;
+  width:        18rpx;
+  border-width: 4rpx 4rpx 0 0;
+  border-color: #888888;
+  border-style: solid;
+  transform:    matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}

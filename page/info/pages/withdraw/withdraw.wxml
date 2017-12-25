@@ -1,0 +1,28 @@
+<import src="/page/common/head.wxml" />
+<import src="/page/common/foot.wxml" />
+
+<view class="page-body">
+  <!--<template is="head" data="{{...userInfo}}"/>-->
+
+  <view class="benefit-body">
+    <view class="benefit-main">
+      <view class="benefit-main-head">提现金额</view>
+
+      <view class="benefit-main-body">
+        <view class="benefit-main-body-item benefit-font-big">¥</view>
+        <view class="benefit-main-body-item">
+          <input class="weui-input benefit-font-big" placeholder="请输入提现金额" placeholder-class="placeholder-class" bindinput="withdrawChange" type="digit" value="{{withdrawTotal}}" />
+        </view>
+      </view>
+
+      <view class="benefit-main-foot">
+        <view class="benefit-main-foot-item">可用余额:{{userDetail.currency_ready}}</view>
+        <view bindtap="withdrawAll" class="benefit-main-foot-item">全部提现</view>
+      </view>
+    </view>
+  </view>
+
+  <view class="benefit-btn-area"><button type="primary" bindtap="doWithdraw">确认提现到微信</button></view>
+
+  <!-- <template is="foot" /> -->
+</view>

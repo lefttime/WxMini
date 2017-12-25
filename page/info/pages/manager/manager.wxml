@@ -1,0 +1,72 @@
+<import src="../../../common/head.wxml" />
+<import src="../../../common/foot.wxml" />
+
+<view class="page-body">
+  <!--<template is="head" data="{{...userInfo}}"/>-->
+
+  <view class="weui-search-bar">
+    <view class="weui-search-bar__form">
+      <view class="weui-search-bar__box">
+        <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+        <input type="text" class="weui-search-bar__input" placeholder="请输入推广员的游戏ID/手机号" bindconfirm="searchConfirm" />
+      </view>
+    </view>
+  </view>
+
+  <view wx:if="{{isPromoterValid}}" class="userinfo-head-box">
+    <view class="userinfo-head-item">
+      <view wx:if="{{promoter.avatar==''}}"><image style="width: 128px; height: 128px;" src="../../../../image/iconfont-user.png" /></view>
+      <view wx:else><image style="width: 128px; height: 128px;" src="{{promoter.avatar}}" /></view>
+    </view>
+    <view class="userinfo-head-item">{{promoter.nickname}}</view>
+  </view>
+
+  <view wx:if="{{isPromoterValid}}" class="userinfo-box">
+    <view class="userinfo-section">
+      <view class="userinfo-section-title">手机号</view>
+      <view class="userinfo-section-item">{{promoter.phone}}</view>
+    </view>
+
+    <view class="userinfo-section">
+      <view class="userinfo-section-title">上级</view>
+      <view class="userinfo-section-item">{{promoter.leaderNickname}}</view>
+    </view>
+    
+    <view class="userinfo-section">
+      <view class="userinfo-section-title">游戏ID</view>
+      <view class="userinfo-section-item">{{promoter.gameId}}</view>
+    </view>
+    
+    <view class="userinfo-section">
+      <view class="userinfo-section-title">推广码</view>
+      <view class="userinfo-section-item">{{promoter.promoCode}}</view>
+    </view>
+    
+    <view class="userinfo-section">
+      <view class="userinfo-section-title">会员数</view>
+      <view class="userinfo-section-item">{{promoter.promoterTotal}}</view>
+    </view>
+    
+    <view class="userinfo-section">
+      <view class="userinfo-section-title">加入时间</view>
+      <view class="userinfo-section-item">{{promoter.createdAt}}</view>
+    </view>
+    
+    <view class="userinfo-section">
+      <view class="userinfo-section-title">最近登录时间</view>
+      <view class="userinfo-section-item">{{promoter.updatedAt}}</view>
+    </view>
+    
+    <view class="userinfo-section">
+      <view class="userinfo-section-title">状态</view>
+      <view wx:if="{{promoter.status==0}}" class="userinfo-section-item special-font-green">启用</view>
+      <view wx:else class="userinfo-section-item special-font-red ">停封</view>
+    </view>
+  </view>
+
+  <view wx:if="{{isPromoterValid}}" >
+    <button type="primary" bindtap="doFrozen">设置停封/解除停封</button>
+  </view>
+
+  <!-- <template is="foot" /> -->
+</view>

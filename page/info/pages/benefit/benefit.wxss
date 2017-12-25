@@ -1,0 +1,63 @@
+@import "/page/common/lib/weui.wxss";
+
+.page-body {
+  display:        flex;
+  flex-direction: column;
+  min-height:     100%;
+  font-size:      32rpx;
+  font-family:    -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.benefit-body {
+  display:          flex;
+  flex-flow:        row;
+  background-color: #FFF;
+  margin:           32rpx 0;
+  padding:          32rpx 64rpx;
+  justify-content:  space-between;
+}
+
+.benefit-main {
+  display:    flex;
+  flex-flow:  column;
+  min-height: 100%;
+}
+
+.benefit-main-item {
+  display:     flex;
+  align-items: center;
+}
+
+.benefit-main-item-sub {
+  font-size: 64px;
+}
+
+.benefit-sub {
+  display:         flex;
+  flex-flow:       column;
+  min-height:      100%;
+  justify-content: flex-end;
+}
+
+.benefit-sub-item {
+  display:       flex;
+  color:         skyblue;
+}
+
+.benefit-font-underline {
+  background: linear-gradient(skyblue, skyblue) no-repeat;
+  background-size: 100% 1px;
+  background-position: 0 1.25em;
+}
+
+.benefit-font-color {
+  color: forestgreen;
+}
+
+.benefit-font-weight {
+  font-weight: 600;
+}
+
+.benefit-btn-area {
+  padding: 0 32rpx;
+}

@@ -1,0 +1,11 @@
+<view class="page-body">
+  <view class="member-body">
+    <view wx:for="{{members}}" wx:key="game_id">
+      <view class="member-section">
+        <view class="member-item-primary">{{item.nickname}}</view>
+        <view class="member-item-primary">ID：{{item.game_id}}</view>
+        <view class="member-item-secondary">{{item.createdAt}}</view>
+      </view>
+    </view>
+  </view>
+</view>

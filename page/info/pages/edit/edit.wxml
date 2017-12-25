@@ -1,0 +1,43 @@
+<view class="page-body">
+  <view class="input-box">
+
+    <view class="input-section">
+      <view class="input-section-title">手机号</view>
+      <view class="input-section-input">
+        <input class="weui-input" placeholder="{{promoter.phone}}" disabled="true" />
+      </view>
+      <view class="input-section-button">
+        <button type="primary" class="captcha-btn-invalid" bindtap="changePhoneNumber">更改手机</button>
+      </view>
+    </view>
+
+    <view class="input-section">
+      <view class="input-section-title">密码</view>
+      <view class="input-section-input">
+        <input class="weui-input" placeholder="123456" disabled="true" value="{{promoter.promoPass}}" />
+      </view>
+    </view>
+
+    <view class="input-section">
+      <view class="input-section-title">微信号</view>
+      <view class="input-section-input">
+        <input class="weui-input" auto-focus placeholder="请输入您的微信号" value="{{promoter.wechat}}" bindinput="wechatChanged" />
+      </view>
+    </view>
+
+    <view class="input-section">
+      <view class="input-section-title">游戏ID</view>
+      <view class="input-section-input">
+        <input class="weui-input" auto-focus placeholder="请输入您的游戏ID" value="{{promoter.gameid}}" bindinput="gameIDChanged" />
+      </view>
+    </view>
+  </view>
+
+  <view class="submit-body">
+    <view class="submit-item"><button type="primary" bindtap="registerPromoter">确定</button></view>
+  </view>
+
+  <view class="warning-text-tips">
+  注：微信号和登录游戏的微信必须一致，否则无法提现。
+  </view>
+</view>

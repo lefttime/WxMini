@@ -1,0 +1,84 @@
+@import "/page/common/lib/weui.wxss";
+
+.page-body {
+  display:        flex;
+  flex-direction: column;
+  min-height:     100%;
+  font-size:      32rpx;
+  font-family:    -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.benefit-body {
+  display:    flex;
+  flex-flow:  column;
+  min-height: 100%;
+}
+
+.benefit-main {
+  display:          flex;
+  flex-flow:        column;
+  min-height:       100%;
+  background-color: #FFF;
+  margin:           32rpx 0;
+  padding:          32rpx 64rpx;
+  justify-content:  space-between;
+}
+
+.benefit-main-head {
+  display:    flex;
+  flex-flow:  column;
+  min-height: 100%;
+}
+
+.benefit-main-body {
+  display:       flex;
+  align-items:   cener;
+  height:        180rpx;
+  border-bottom: 1px solid #888888;
+}
+
+.benefit-main-body-item {
+  display: flex;
+  padding-right:   10rpx;
+  align-items:     center;
+  justify-content: center;
+}
+
+.benefit-main-foot {
+  display:         flex;
+  flex-flow:       row;
+  justify-content: space-between;
+}
+
+.benefit-main-foot-item {
+}
+
+.benefit-font-underline {
+  background: linear-gradient(skyblue, skyblue) no-repeat;
+  background-size: 100% 1px;
+  background-position: 0 1.25em;
+}
+
+.benefit-font-big {
+  font-size: 48px;
+}
+
+.benefit-font-color {
+  color: forestgreen;
+}
+
+.benefit-font-weight {
+  font-weight: 600;
+}
+
+.benefit-btn-area {
+  padding: 0 32rpx;
+}
+
+.input-understyle {
+  border-bottom: 1px solid #888888;
+}
+
+.placeholder-class {
+  font-size: 32px;
+}

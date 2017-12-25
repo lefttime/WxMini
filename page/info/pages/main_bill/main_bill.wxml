@@ -1,0 +1,33 @@
+<import src="/page/common/head.wxml" />
+<import src="/page/common/foot.wxml" />
+
+<view class="page-body">
+  <view class="title-body">
+    <view class="title-section">
+      <view class="title-item-1"><text>日期</text></view>
+      <view class="title-item-2">收入</view>
+      <view class="title-item-3">支出</view>
+      <view class="title-item-4">余额</view>
+    </view>
+  </view>
+
+  <view class="content-body">
+    <view wx:for="{{charges}}" wx:key="{{date}}">
+      <view id="{{index}}" class="content-section" bindtap='checkCharge'>
+        <view wx:if="{{index==0}}" class="content-item-1">当日</view>
+        <view wx:else class="content-item-1">{{item.date}}</view>
+
+        <view class="content-item-2" wx:if="{{item.income > 0}}">+{{item.income}}</view>
+        <view class="content-item-2" wx:else>0</view>
+
+        <view class="content-item-3" wx:if="{{item.expense > 0}}">-{{item.expense}}</view>
+        <view class="content-item-3" wx:else>0</view>
+
+        <view class="content-item-4">
+          <view class="content-item-text">{{item.left}}元</view>
+          <image style="width:16px; height:16px;" src="/image/icon-navi-arrow.png" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

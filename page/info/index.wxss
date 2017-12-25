@@ -1,0 +1,124 @@
+@import "../common/lib/weui.wxss";
+
+.page-body {
+  display:        flex;
+  flex-direction: column;
+  min-height:     100%;
+  font-size:      32rpx;
+  font-family:    -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
+}
+
+.userinfo-box {
+  /*display:          flex;
+  flex-flow:        row;*/
+  margin-top:       32rpx;
+  padding:          32rpx 64rpx;
+  background-color: #FFFFFF;
+}
+
+.userinfo-avatar {
+  width:  200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}
+
+.userinfo-section {
+  display:    flex;
+  flex-flow:  column;
+  width:      100%;
+  min-height: 100%;
+}
+
+.userinfo-section-title {
+  display:     flex;
+  flex-flow:   row;
+  justify-content: space-between;
+  font-weight: 600;
+  width: 100%;
+}
+
+.userinfo-section-title-item {
+}
+
+.userinfo-section-title-item-navi {
+  color: forestgreen;
+  background: linear-gradient(forestgreen, forestgreen) no-repeat;
+  background-size: 100% 1px;
+  background-position: 0 1.25em;
+}
+
+.userinfo-section-item {
+  /* color:     #888888;
+  font-size: 12px; */
+  display:   flex;
+  flex-flow: row;
+}
+
+.navigator-box {
+  margin-top: 32rpx;
+}
+
+.navigator {
+  display:          flex;
+  align-items:      center;
+  background-color: #FFFFFF;
+  margin-bottom:    1px;
+  height:           120rpx;
+  padding:          0 64rpx;
+}
+
+.navigator-text {
+  flex:            1;
+  display:         flex;
+  flex-flow:       column;
+  min-height:      100%;
+  justify-content: center;
+}
+
+.navigator-text-title {
+  font-weight: 600; 
+}
+
+.navigator-text-subtitle {
+  color:     #888888;
+  font-size: 12px; 
+}
+
+.navigator-navi {
+  flex:             1;
+  display:          flex;
+  flex-flow:        row;
+  min-height:       100%;
+  align-items:      center;
+  justify-content:  space-between;
+}
+
+.navigator-navi-item {
+  display:          flex;
+  justify-content:  center;
+}
+
+.navigator-navi-arrow {
+  display:      inline-block;
+  height:       18rpx;
+  width:        18rpx;
+  border-width: 4rpx 4rpx 0 0;
+  border-color: #888888;
+  border-style: solid;
+  transform:    matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+}
+
+.navigator-special-text {
+  font-weight: 600;
+  color: forestgreen;
+}
+
+.special-text-red {
+  font-weight: 600;
+  color: red;
+}
+
+.special-text-green {
+  font-weight: 600;
+  color: forestgreen;
+}
